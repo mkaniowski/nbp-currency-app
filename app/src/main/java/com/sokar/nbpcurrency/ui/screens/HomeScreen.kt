@@ -18,7 +18,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.sokar.nbpcurrency.R
-import com.sokar.nbpcurrency.data.enums.TableEnum
 import com.sokar.nbpcurrency.data.states.ExchangeRatesState
 import com.sokar.nbpcurrency.ui.components.CurrencyDropdown
 import com.sokar.nbpcurrency.viewmodel.CurrencyViewModel
@@ -56,10 +55,7 @@ fun HomeScreen(
             )
 
             Button(onClick = {
-                currencyViewModel.getCurrencyExchangeRates(
-                    TableEnum.A,
-                    selectedCurrency.value,
-                )
+                TODO("Call correct viewModel method")
             }) {
                 Text(text = "Get Exchange Rates")
             }

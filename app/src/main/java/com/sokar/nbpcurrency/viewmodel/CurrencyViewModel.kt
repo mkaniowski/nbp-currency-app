@@ -9,7 +9,6 @@ import com.sokar.nbpcurrency.utils.DispatcherProvider
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class CurrencyViewModel(
     private val exchangeRatesRepository: ExchangeRatesRepository,
@@ -30,15 +29,9 @@ class CurrencyViewModel(
 
         viewModelScope.launch(dispatcherProvider.io()) {
             try {
-                val exchangeRates = exchangeRatesRepository.getExchangeRates(table, currency)
-
-                withContext(dispatcherProvider.main()) {
-                    _exchangeRatesCurrencyState.value = ExchangeRatesState.Success(exchangeRates)
-                }
+                TODO("Implement getCurrencyExchangeRates, use repository")
             } catch (e: Exception) {
-                withContext(dispatcherProvider.main()) {
-                    _exchangeRatesCurrencyState.value = ExchangeRatesState.Error(e)
-                }
+                TODO("Implement getCurrencyExchangeRates, set error state")
             }
         }
     }

@@ -11,5 +11,5 @@ class ExchangeRatesRepositoryImpl(
     override suspend fun getExchangeRates(
         table: TableEnum,
         currency: String,
-    ): ExchangeRatesTable = TODO("Implement the getExchangeRates method")
+    ): ExchangeRatesTable = exchangeRatesApiService.getExchangeRates(table, currency)
 }

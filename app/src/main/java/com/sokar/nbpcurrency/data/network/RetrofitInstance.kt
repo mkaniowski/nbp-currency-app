@@ -4,7 +4,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 
 object RetrofitInstance {
-    private const val BASE_URL = ""
+    private const val BASE_URL = "https://api.nbp.pl/api/"
 
     private val okHttpClient: OkHttpClient =
         TODO("Create an OkHttpClient instance with a logging interceptor and a timeout of 60 seconds")
